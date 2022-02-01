@@ -12,17 +12,13 @@ Entry.prototype.wordCounter = function() {
     if (!Number(element)) {
       wordCount++;
     }
-  })
+  });
   return wordCount;
 };
 
-Entry.prototype.findVowel = function() {
-  var vowelsCount = 0;
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (let char of (this.words)) {
-    if (vowels.includes(char)) {
-      vowelsCount++;
-      console.log(vowelsCount);
-    }
-  }
+Entry.prototype.getTeaser = function() {
+  const wordArray = (this.words).split(" ");
+  const newArray = wordArray.slice(0, 8);
+  const split =  newArray.join(" ");
+  return split;
 };

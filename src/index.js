@@ -6,9 +6,10 @@ $(document).ready(function(){
     event.preventDefault();
     let input = $("#text-passage").val();
     let userInput = new Entry (input);
-    wordCount = userInput.wordCounter();
+    let wordCount = userInput.wordCounter();
     $("#all-words").html(wordCount);
-    /*$("#all-words").html("<p>" + wordCount + "<span id='all-words'></span></p>");*/
-
+    let test = userInput.getTeaser();
+    $("#teaser").html(test);
+    
   });
 });
